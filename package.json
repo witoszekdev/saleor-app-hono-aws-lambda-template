@@ -10,7 +10,9 @@
     "test": "jest",
     "cdk": "cdk",
     "fetch-schema": "curl https://raw.githubusercontent.com/saleor/saleor/${npm_package_saleor_schemaVersion}/saleor/graphql/schema.graphql > lambda/graphql/schema.graphql",
-    "generate": "graphql-codegen"
+    "generate": "graphql-codegen",
+    "postinstall": "pnpm dlx @socketsecurity/socket-patch apply --silent --ecosystems npm",
+    "dependencies": "pnpm dlx @socketsecurity/socket-patch apply --silent --ecosystems npm"
   },
   "saleor": {
     "schemaVersion": "3.20"
